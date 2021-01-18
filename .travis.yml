@@ -9,7 +9,7 @@ language: generic
 
 # script:
 #   - docker run -e CI=true evakung/docker-react npm run test
-before_deploy: echo $AWS_ACCESS_KEY
+before_deploy: echo $AWS_SECRET_KEY
 
 deploy:
   provider: elasticbeanstalk
@@ -21,4 +21,4 @@ deploy:
   on:
     branch: master
   access_key_id: "AKIAQU3SLUHJDAIHNWVX"
-  secret_access_key: "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"
+  secret_access_key: rN/0/8q+buWRAT0QDO0Nfqss5TjBCt019B1XAyLD
