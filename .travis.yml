@@ -9,6 +9,8 @@ before_install:
 
 script:
   - docker run -e CI=true evakung/docker-react npm run test
+before_deploy: "echo $AWS_ACCESS_KEY"
+
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
